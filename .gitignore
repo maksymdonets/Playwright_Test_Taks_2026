@@ -1,0 +1,9 @@
+node_modules/
+playwright-report/
+test-results/
+blob-report/
+artifacts/
+AGENTS.md
+**/AGENTS.override.md
+skills/
+docs/

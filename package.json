@@ -1,0 +1,28 @@
+{
+  "name": "playwright-todomvc-showcase",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-style Playwright showcase against the official Playwright TodoMVC demo.",
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "scripts": {
+    "clean:reports": "node ./scripts/clean-reports.mjs",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:smoke": "node ./scripts/run-playwright-local.mjs --project=chromium tests/specs/create-todos.spec.ts",
+    "test:e2e": "node ./scripts/run-playwright-local.mjs",
+    "test:e2e:chromium": "node ./scripts/run-playwright-local.mjs --project=chromium",
+    "test:e2e:firefox": "node ./scripts/run-playwright-local.mjs --project=firefox",
+    "test:e2e:webkit": "node ./scripts/run-playwright-local.mjs --project=webkit",
+    "test:spec": "node ./scripts/run-playwright-local.mjs",
+    "test:local": "node ./scripts/run-playwright-local.mjs",
+    "report:open": "playwright show-report",
+    "verify": "npm run test:e2e:chromium"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.1",
+    "@playwright/test": "^1.54.2",
+    "typescript": "^5.8.3"
+  }
+}
