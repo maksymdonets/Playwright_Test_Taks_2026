@@ -7,22 +7,23 @@
     "node": ">=20.11.0"
   },
   "scripts": {
-    "clean:reports": "node ./scripts/clean-reports.mjs",
+    "clean:reports": "tsx ./scripts/clean-reports.ts",
     "test:ui": "playwright test --ui",
     "test:debug": "playwright test --debug",
-    "test:smoke": "node ./scripts/run-playwright-local.mjs --project=chromium tests/specs/create-todos.spec.ts",
-    "test:e2e": "node ./scripts/run-playwright-local.mjs",
-    "test:e2e:chromium": "node ./scripts/run-playwright-local.mjs --project=chromium",
-    "test:e2e:firefox": "node ./scripts/run-playwright-local.mjs --project=firefox",
-    "test:e2e:webkit": "node ./scripts/run-playwright-local.mjs --project=webkit",
-    "test:spec": "node ./scripts/run-playwright-local.mjs",
-    "test:local": "node ./scripts/run-playwright-local.mjs",
+    "test:smoke": "tsx ./scripts/run-playwright-local.ts --project=chromium tests/specs/create-todos.spec.ts",
+    "test:e2e": "tsx ./scripts/run-playwright-local.ts",
+    "test:e2e:chromium": "tsx ./scripts/run-playwright-local.ts --project=chromium",
+    "test:e2e:firefox": "tsx ./scripts/run-playwright-local.ts --project=firefox",
+    "test:e2e:webkit": "tsx ./scripts/run-playwright-local.ts --project=webkit",
+    "test:spec": "tsx ./scripts/run-playwright-local.ts",
+    "test:local": "tsx ./scripts/run-playwright-local.ts",
     "report:open": "playwright show-report",
     "verify": "npm run test:e2e:chromium"
   },
   "devDependencies": {
-    "@types/node": "^24.0.1",
     "@playwright/test": "^1.54.2",
+    "@types/node": "^24.0.1",
+    "tsx": "^4.21.0",
     "typescript": "^5.8.3"
   }
 }

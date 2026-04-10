@@ -16,7 +16,6 @@
     "playwright.config.ts",
     "pages/**/*.ts",
     "tests/**/*.ts",
-    "scripts/**/*.mjs"
+    "scripts/**/*.ts"
   ]
 }
-
